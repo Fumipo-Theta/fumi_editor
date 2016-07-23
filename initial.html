@@ -1,0 +1,51 @@
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FUMI editor</title>
+<link rel="stylesheet" type="text/css" href="./css/blue_head.css">
+<link rel="stylesheet" type="text/css" href="./css/editor.css">
+<script src="./js/jquery-2.2.0.min.js" charset="utf-8"></script>
+<script src="./js/jquery-ui.min.js" charset="utf-8"></script>
+<script src="./js/d3.min.js" charset="utf-8"></script>
+<link rel="icon" type="image/png" href="./data/logo.png" sizes="64x64">
+</head>
+<body>
+<!-- edit menu -->
+<div id="menu_bar"></div>
+<div id="menu_space"></div>
+
+<div id="main" contenteditable="false">
+<!-- text -->
+<div id="text_wrapper">
+	<!-- title -->
+	<div id="title" class="item">
+		<h1>Title</h1>
+	</div>
+	
+	<div id="sections"></div>
+	
+	<!-- section appender -->
+	<div id="sectionAppender" class="item appender"></div>
+	
+	<!-- referrence -->
+	<div id="Referrence" class="item">
+		<h2>Reference</h2>
+		<div class="content">
+			<ol id="refList"></ol>
+			<input id="button__append_refList" class="button" type="button" value="+referrence">
+		</div>
+	</div>
+</div>
+
+<!-- Figure -->
+<div id="figure_wrapper">
+	<!-- figures -->
+	<div id="figures"></div>
+	
+	<!-- figure appender -->
+	<div id="figureAppender" class="item appender"></div>
+</div>
+</div>
+
+</body>
+<script charset="UTF-8" src="./js/fumi_editor.js"></script>
+</html>

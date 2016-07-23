@@ -1,0 +1,308 @@
+/* スクロールバー */
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.7)
+}
+ 
+::-webkit-scrollbar-thumb {
+		background-color: #2196f3;
+}
+
+*{
+		box-sizing: border-box;
+}
+
+body{
+	height: 100%;
+	margin: 0;
+}
+
+/* top menu */
+#menu_bar{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 5vh;
+	min-height: 32px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,1);
+	padding: 2px;
+	
+}
+
+#menu_g1{
+	flex: 2;
+}
+
+#menu_g2{
+	flex: 8;
+	color: #fff;
+}
+
+#menu_bar input[type="image"],
+#menu_bar input[type="url"]{
+	height:90%;
+	min-height: 24px;
+	vertical-align: middle;
+}
+
+#menu_space{
+	width: 100%;
+	height: 5vh;
+	min-height: 32px;
+}
+
+input#urlBox{
+	width: 50%;
+	min-widht: 5em;
+}
+
+/* main contents */
+#main{
+	display: flex;
+	justify-content: space-between;
+	height: 95vh;
+}
+
+div.content{
+	padding: 0.5em;
+}
+
+.item{
+	margin: 15px 5px;
+	background-color: #fff;
+}
+
+	/* text wrapper */
+#text_wrapper{
+	flex: 2;
+	padding: 5px;
+	overflow: auto;
+	background-color: #444;
+}
+
+.appender{
+	padding: 5px;
+	border: 2px solid #2196f3;
+}
+
+
+p{
+	text-indent:1em;
+	padding:0 1em;
+	margin: 0.5em auto;
+	border: dashed 1px #00f;
+	font-family: "Yu mincho", "Cambria Math", "Times new roman", "San-serif";
+}
+
+	/* figure wrapper */
+#figure_wrapper{
+	flex: 1;
+	padding: 5px;
+	overflow: auto;
+	background-color: #444;
+}
+
+input#figureUrl,
+input#figureId{
+	width: 100%;
+}
+
+.title{
+	width: 100%;
+	color: #fff;
+	background-color: #333;
+	min-height: 2em;
+	text-align: center;
+}
+
+
+
+.fig{
+	background-color: #888;
+}
+
+.link_fig{
+	margin: 0 auto;
+}
+
+
+img{
+	width:100%;
+}
+
+.paragraph{
+	text-indent: 1em;
+	padding: 1em;
+}
+
+p.caption{
+	background-color: #fff;
+	border: dotted 1px #f00;
+}
+
+
+
+/* form */
+form{
+	margin: 0;
+}
+
+input.button{
+	border: none;
+	background-color: #2196f3;
+	color: #fff;
+	cursor: pointer;
+	min-height: 32px;
+}
+
+input.button:hover,
+input.button:focus{
+	background-color: #FF4081;
+}
+
+
+/* anchor */
+a,
+a:visited{
+	cursor: pointer;
+	color: #00f;
+}
+
+a[target="_blank"]:hover::after{
+	content:url("../data/ic_open_in_new_white_24px.svg");
+	position: relative;
+	right:0;
+	bottom: 0;
+}
+
+
+p.premise
+{
+	color:blue;
+}
+
+p.mine
+{
+	color:red;
+}
+
+p.cf
+{
+	color:gray;
+}
+
+p.question
+{
+	color:red;
+	text-decoration: underline;
+}
+
+p.general
+{
+	color:black;
+}
+
+p.precise
+{
+	color:black;
+}
+
+p.reason
+{
+	color:black;
+}
+
+p.claim
+{
+	color:green;
+}
+
+p.hypothesis
+{
+	color:black;
+}
+
+
+.toolTip{ position: relative; }
+
+.toolTip span{   display: block; border: solid 1px #999; background-color: #eee; color: #666;    text-decoration: none;  position: absolute; top: 20px;  left: 10px; padding: 5px;   visibility: hidden; width: 300px;}
+
+a.toolTip:hover,a.toolTip:hover 
+
+span{ visibility: visible; z-index: 100; }
+
+
+span.blue
+{ 
+	color:blue;
+	text-decoration:bold;
+}
+
+span.premise
+{
+	color:blue;
+}
+
+span.mine
+{
+	color:red;
+}
+
+span.cf
+{
+	color:gray;
+}
+
+span.question
+{
+	color:red;
+	text-decoration: underline;
+}
+
+span.general
+{
+	color:black;
+}
+
+span.precise
+{
+	color:black;
+}
+
+span.reason
+{
+	color:black;
+}
+
+span.claim
+{
+	color:green;
+}
+
+span.hypothesis
+{
+	color:black;
+}
+
+
+.data {
+	font-family: "Ricty diminished";
+	font-size: 75%;
+	background: #dddddd;
+	padding: 4em;
+	white-space: pre;
+}
+
+.console {
+	font-family: "Ricty diminished";
+	font-size: 75%;
+	background: #ddddff;
+	white-space: pre;
+
+}
