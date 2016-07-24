@@ -1,0 +1,81 @@
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FUMI editor</title>
+<link rel="stylesheet" type="text/css" href="./css/blue_head.css">
+<link rel="stylesheet" type="text/css" href="./css/editor.css">
+<script src="./js/jquery-2.2.0.min.js" charset="utf-8"></script>
+<script src="./js/jquery-ui.min.js" charset="utf-8"></script>
+<script src="./js/d3.min.js" charset="utf-8"></script>
+<link rel="icon" type="image/png" href="./data/logo.png" sizes="64x64">
+</head>
+<body>
+<!-- edit menu -->
+<div id="menu_bar"><div id="menu_g1">
+	<input id="button__save_as_file" class="button" type="image" src="./data/ic_save_white_24px.svg" alt="save as file">
+	<input id="button__edit_start" class="button" type="image" src="./data/ic_create_white_24px.svg" alt="edit start" style="">
+	<input id="button__edit_end" class="button" type="image" src="./data/ic_done_white_24px.svg" alt="edit end">
+</div>
+<div id="menu_g2">
+	Select text &gt;
+	<input id="setBold" type="image" class="button" src="./data/ic_format_bold_white_24px.svg" alt="bold">
+	<input id="setItalic" type="image" class="button" src="./data/ic_format_italic_white_24px.svg" alt="italic">
+	<input id="crtLink" type="image" class="button" src="./data/ic_link_white_24px.svg" alt="create Link">
+	<input id="urlBox" type="text" placeholder="input url..." autocomplete="on" list="urlList">
+	
+	<datalist id="urlList">
+		<option value="http://package/ドキュメント/Articles/"></option><option value="http://myapps/"></option>
+		<option value="./"></option>
+	</datalist>
+</div></div>
+<div id="menu_space"></div>
+
+<div id="main" contenteditable="false">
+<!-- text -->
+<div id="text_wrapper">
+	<!-- title -->
+	<div id="title" class="item">
+		<h1>Title</h1>
+	</div>
+	
+	<div id="sections"><div class="item"><h2>概要</h2><div class="content"><p>これはHTML+JavaScript+CSSで作成した, HTMLエディタです. 任意の数のテキストセクション, 画像ファイルの追加や, ハイパーリンクの設定が行えることが特徴となっています.&nbsp;</p><p>このアプリケーションはローカルサーバを用意し, その上で使用することを前提しています.&nbsp;</p></div></div><div class="item"><h2>使い方</h2><div class="content"><p>編集モードに入るには左上の鉛筆ボタンを押します. 編集を終える際にはその隣のチェックマークを押します. ページを保存するには, フロッピーディスクボタンを押します.</p><p>「+section」ボタンを押すとテキストセクションが追加されます. 一つのセクションはタイトル部分と, パラグラフ群から構成されます.</p></div></div></div>
+	
+	<!-- section appender -->
+	<div id="sectionAppender" class="item appender"><form id="sectionInfo">
+		<input id="button__section_append" class="button" type="button" value="+section">
+	</form></div>
+	
+	<!-- referrence -->
+	<div id="Referrence" class="item">
+		<h2>Reference</h2>
+		<div class="content">
+			<ol id="refList"></ol>
+			<input id="button__append_refList" class="button" type="button" value="+referrence">
+		</div>
+	</div>
+</div>
+
+<!-- Figure -->
+<div id="figure_wrapper">
+	<!-- figures -->
+	<div id="figures"><div id="Test image" class="item"><div class="title">Figure (#Test image)</div><div class="content fig"><a href="./data/test.png" target="_blank"><img src="./data/test.png" alt="Test image" title="./data/test.png"></a><p class="caption">これはテストイメージです.</p></div></div><div id="Demo image" class="item"><div class="title">Figure (#Demo image)</div><div class="content fig"><a href="./data/demo.png" target="_blank"><img src="./data/demo.png" alt="Demo image" title="./data/demo.png"></a><p class="caption">これはデモイメージです</p></div></div></div>
+	
+	<!-- figure appender -->
+	<div id="figureAppender" class="item appender"><form id="figureInfo">
+	<input id="figureNum" type="number" value="1" style="display:none">
+	<input id="figureUrl" type="text" placeholder="Input url for image file" autocomplete="on" list="figUrlList">
+	<input id="figureId" type="text" placeholder="Input figure name">
+	<input id="button__figure_append" class="button" type="button" value="+figure">
+	
+	<datalist id="figUrlList">
+		<option value="./image/"></option>
+		<option value="./image/common/"></option>
+		<option value="http://myapps/image/"></option>
+		<option value="http://package/"></option>
+	</datalist>
+</form></div>
+</div>
+</div>
+
+
+<script charset="UTF-8" src="./js/fumi_editor.js"></script>
+</body>
